@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-export default class MusicAwards extends Component {
+export default class Reviewery extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('MusicAwards', () => MusicAwards);
+AppRegistry.registerComponent('Reviewery', () => Reviewery);

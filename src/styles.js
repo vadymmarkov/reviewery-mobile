@@ -1,3 +1,4 @@
+// @flow
 'use strict';
 
 var React = require('react-native');
@@ -17,6 +18,14 @@ module.exports = StyleSheet.create({
   screenContainer: {
     flex: 1,
     backgroundColor: colors.background
+  },
+  heading: {
+    color: colors.title,
+    fontSize: 28,
+    textAlign: 'center',
+    marginBottom: 10,
+    paddingLeft: 20,
+    paddingRight: 20
   },
   button: {
     margin: 100,
@@ -64,5 +73,5 @@ module.exports = StyleSheet.create({
   },
   disclosure: {
     alignSelf: 'center'
-  },
+  }
 });

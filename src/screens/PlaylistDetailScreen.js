@@ -1,3 +1,4 @@
+// @flow
 'use strict';
 
 import React, { Component } from 'react';
@@ -5,87 +6,70 @@ import {
   StyleSheet,
   ListView,
   Text,
-  View
+  View,
+  RefreshControl,
+  AlertIOS,
+  Linking
 } from 'react-native';
 
 import TrackRow from '../views/TrackRow';
-
-const FBSDK = require('react-native-fbsdk');
-const {
-  LoginManager,
-  AccessToken
-} = FBSDK;
+import Networking from '../networking/Networking';
 
 var baseStyles = require('../styles');
 var colors = require('../colors');
 
 export default class PlaylistDetailScreen extends Component {
 
-  // Initialize the hardcoded data
+  static navigatorButtons = {
+    rightButtons: [{
+      icon: require('../../img/navBarMore.png'),
+      id: 'more'
+    }]
+  };
+
   constructor(props) {
     super(props);
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    this.onSubmitTrackReview = this.closeTrackReview.bind(this);
+    this.networking = new Networking();
 
-    const dataSource = new ListView.DataSource({
+    const listDataSource = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
 
-    this.submitTrackReview = this._submitTrackReview.bind(this);
-
     this.state = {
-      dataSource: dataSource.cloneWithRows([
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us ApartsssssssssssLoveWill Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'},
-        {id: '1', artist: 'Joy Division', name: 'Love Will Tear Us Apart'}
-      ])
+      dataSource: listDataSource.cloneWithRows([]),
+      refreshing: true
     };
   }
 
+  // Lifecycle
+
   componentWillMount() {
-    AccessToken.getCurrentAccessToken()
-    .then((data) => {
-
-    })
-    .catch((error) => {
-
-    });
+    this.refreshData();
   }
 
-  render() {
-    return (
-      <View style={baseStyles.screenContainer}>
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={this._renderRow.bind(this)}
-          renderSeparator={ (sectionId, rowId) =>
-            <View key={rowId} style={baseStyles.separator} />
-          }
-        />
-      </View>
-    );
+  // Events
+
+  onNavigatorEvent(event) {
+    if (event.type != 'NavBarButtonPress' || event.id != 'more') {
+      return;
+    }
+
+    AlertIOS.alert(this.state.name, '', [
+      {text: 'Cancel', style: 'cancel'},
+      {text: 'Open in Spotify', onPress: () => Linking.openURL(this.state.href)},
+    ]);
   }
 
-  /// Private
-
-  _renderRow(rowData, sectionId, rowId) {
-    return (
-      <TrackRow
-        data={rowData}
-        onReviewPress={this._onShowReviewPress.bind(this, rowData)}/>
-     );
-   }
-
-  _onShowReviewPress(rowData) {
+  onPressShowReview(rowData, rowId) {
     this.props.navigator.showLightBox({
       screen: "app.TrackReviewScreen",
       passProps: {
+        chartId: this.props.chartId,
+        playlistId: this.props.playlistId,
         track: rowData,
-        submitTrackReview: this.submitTrackReview
+        submitTrackReview: this.onSubmitTrackReview
       },
       style: {
         backgroundBlur: "dark",
@@ -94,7 +78,62 @@ export default class PlaylistDetailScreen extends Component {
     });
   }
 
-  _submitTrackReview(trackId, rating) {
+  closeTrackReview(rowId, rating) {
+    this.refreshData();
     this.props.navigator.dismissLightBox();
+  }
+
+  // Networking
+
+  async refreshData() {
+    try {
+      this.setState({refreshing: true});
+      let data = await this.networking.get(
+        `charts/${this.props.chartId}/playlists/${this.props.playlistId}`
+      );
+      this.setState({
+        name: data.name,
+        href: data.href,
+        dataSource: this.state.dataSource.cloneWithRows(data.tracks),
+        refreshing: false
+      });
+    } catch(error) {
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows([]),
+        refreshing: false
+      });
+    }
+  }
+
+  // Rendering
+
+  renderRow(rowData, sectionId, rowId) {
+    return (
+      <TrackRow
+        data={rowData}
+        onReviewPress={this.onPressShowReview.bind(this, rowData, rowId)}/>
+    );
+  }
+
+  render() {
+    return (
+      <View style={baseStyles.screenContainer}>
+        <ListView
+          enableEmptySections={true}
+          refreshControl={
+            <RefreshControl
+              tintColor={colors.dark}
+              refreshing={this.state.refreshing}
+              onRefresh={this.refreshData.bind(this)}
+            />
+          }
+          dataSource={this.state.dataSource}
+          renderRow={this.renderRow.bind(this)}
+          renderSeparator={ (sectionId, rowId) =>
+            <View key={rowId} style={baseStyles.separator} />
+          }
+        />
+      </View>
+    );
   }
 }

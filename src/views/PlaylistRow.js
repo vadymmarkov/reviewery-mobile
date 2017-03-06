@@ -1,10 +1,12 @@
+// @flow
+'use strict';
+
 import React, { Component } from 'react';
 import {
   View,
   Text,
   Image,
-  TouchableHighlight,
-  StyleSheet
+  TouchableHighlight
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -20,7 +22,7 @@ export default class PlaylistRow extends Component {
         onPress={this.props.onPress}>
           <View style={baseStyles.row}>
             <Image
-              source={{uri: 'https://pbs.twimg.com/media/C1E4xfBWIAAUceW.jpg'}}
+              source={{uri: this.props.data.imageUrl}}
               style={baseStyles.rowImage}/>
             <View style={baseStyles.rowTextContainer}>
               <Text
@@ -30,7 +32,7 @@ export default class PlaylistRow extends Component {
                   {this.props.data.name}
               </Text>
               <Text style={baseStyles.rowSubtitle}>
-                11 songs
+                {this.props.data.tracksCount} songs
               </Text>
             </View>
             <Icon name="angle-right" size={30} color={colors.light}

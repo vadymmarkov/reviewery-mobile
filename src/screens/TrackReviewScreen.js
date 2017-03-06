@@ -1,3 +1,4 @@
+// @flow
 'use strict';
 
 import React, { Component } from 'react';
@@ -6,11 +7,13 @@ import {
   StyleSheet,
   Text,
   View,
+  ActivityIndicator,
   Dimensions
 } from 'react-native';
 
 import StarRating from 'react-native-star-rating';
 import RoundedButton from '../views/RoundedButton';
+import Networking from '../networking/Networking';
 
 var baseStyles = require('../styles');
 var colors = require('../colors');
@@ -20,14 +23,63 @@ export default class TrackReviewScreen extends Component {
 
   constructor(props) {
     super(props);
+    this.networking = new Networking();
     this.state = {
-      rating: 0
+      rating: 0,
+      animating: false,
+      error: ""
     };
   }
+
+  // Events
+
+  onPressRating(rating) {
+    this.setState({
+      rating: rating
+    });
+  }
+
+  onPressSubmit() {
+    if (this.state.animating) {
+      return;
+    }
+    this.submitTrackReview();
+  }
+
+  // Networking
+
+  async submitTrackReview() {
+    try {
+      this.setState({animating: true, error: ''});
+      let chartId = this.props.chartId;
+      let playlistId = this.props.playlistId;
+      let trackId = this.props.track._id;
+      await this.networking.post(
+        `charts/${chartId}/playlists/${playlistId}/review/${trackId}`,
+        {rating: this.state.rating}
+      );
+      this.setState({
+        animating: false
+      });
+      this.props.submitTrackReview(this.props.rowId, this.state.rating);
+    } catch(error) {
+      this.setState({
+        animating: false,
+        error: error.toString()
+      });
+    }
+  }
+
+  // Rendering
 
   render() {
     return (
       <View style={baseStyles.container}>
+        <ActivityIndicator
+          animating={this.state.animating}
+          style={styles.activityIndicator}
+          color="white"
+        />
         <Text
           numberOfLines={3}
           style={styles.name}>
@@ -43,34 +95,33 @@ export default class TrackReviewScreen extends Component {
           rating={this.state.rating}
           starColor={'#FFEFB3'}
           emptyStarColor={colors.white}
-          selectedStar={(rating) => this._onRatingPress(rating)}
+          selectedStar={(rating) => this.onPressRating(rating)}
         />
         <Text style={styles.rating}>
           {`${this.state.rating} of 10 stars`}
+        </Text>
+        <Text style={styles.error}>
+          {this.state.error}
         </Text>
         <RoundedButton
           title="Submit"
           highlightColor={colors.primaryHighlighted}
           style={[baseStyles.button, styles.button]}
           textStyle={[baseStyles.buttonText, styles.buttonText]}
-          onPress={this._onSubmitPress.bind(this)}/>
+          onPress={this.onPressSubmit.bind(this)}/>
       </View>
     );
-  }
-
-  _onRatingPress(rating) {
-    this.setState({
-      rating: rating
-    });
-  }
-
-  _onSubmitPress() {
-    // Sumit review
-    this.props.submitTrackReview(this.props.track.id, this.state.rating);
   }
 }
 
 const styles = StyleSheet.create({
+  error: {
+    fontSize: 20,
+    color: colors.primary,
+    textAlign: 'center',
+    width: 300,
+    margin: 5
+  },
   name: {
     fontSize: 24,
     color: colors.white,
@@ -94,5 +145,10 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: colors.white
-  }
+  },
+  activityIndicator: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 8,
+  },
 });

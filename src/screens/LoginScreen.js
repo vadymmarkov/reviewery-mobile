@@ -1,9 +1,12 @@
+// @flow
+'use strict';
+
 import React, { Component } from 'react';
-// "react-native-carousel-control"
 import {
   StyleSheet,
   Text,
   View,
+  Image
 } from 'react-native';
 
 import NavigationService from '../navigation';
@@ -20,10 +23,40 @@ var colors = require('../colors');
 
 export default class LoginScreen extends Component {
 
+  // Events
+
+  onPressLogin() {
+    let navigationService = new NavigationService();
+    //navigationService.showMainScreen(true);
+    LoginManager.logInWithReadPermissions(['public_profile']).then(
+      function(result) {
+        if (result.isCancelled) {
+          alert('Login was cancelled');
+        } else {
+          AccessToken.getCurrentAccessToken().then((data) => {
+            if (!data.accessToken) {
+              alert('Login failed with error');
+            } else {
+              navigationService.showMainScreen(true);
+            }
+          })
+        }
+      },
+      function(error) {
+        alert('Login failed with error: ' + error);
+      }
+    );
+  }
+
+  // Rendering
+
   render() {
     return (
       <View style={[baseStyles.container, styles.container]}>
-        <Text style={styles.title}>
+        <Image
+          source={require('../../img/logo.png')}
+        />
+        <Text style={[baseStyles.heading, styles.title]}>
           Welcome to Reviewery!
         </Text>
         <Text style={styles.subtitle}>
@@ -34,30 +67,9 @@ export default class LoginScreen extends Component {
           highlightColor={colors.whiteHighlighted}
           style={[baseStyles.button, styles.button]}
           textStyle={[baseStyles.buttonText, styles.buttonText]}
-          onPress={this._onLoginPress}/>
+          onPress={this.onPressLogin}/>
       </View>
     );
-  }
-
-  _onLoginPress() {
-    let navigationService = new NavigationService();
-    navigationService.showMainScreen(true);
-    // LoginManager.logInWithReadPermissions(['public_profile']).then(
-    //   function(result) {
-    //     if (result.isCancelled) {
-    //       alert('Login was cancelled');
-    //     } else {
-    //       AccessToken.getCurrentAccessToken().then(
-    //         (data) => {
-    //           alert(data.accessToken.toString())
-    //         }
-    //       )
-    //     }
-    //   },
-    //   function(error) {
-    //     alert('Login failed with error: ' + error);
-    //   }
-    // );
   }
 }
 
@@ -66,16 +78,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary
   },
   title: {
-    color: colors.whiteHighlighted,
-    fontSize: 28,
-    textAlign: 'center',
-    marginBottom: 10,
-    paddingLeft: 20,
-    paddingRight: 20
+    marginTop: 20,
+    color: colors.white
   },
   subtitle: {
-    color: colors.white,
-    fontSize: 20,
+    color: colors.whiteHighlighted,
+    fontSize: 18,
     textAlign: 'center',
     marginBottom: 5
   },

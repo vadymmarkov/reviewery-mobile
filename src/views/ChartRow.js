@@ -1,10 +1,12 @@
+// @flow
+'use strict';
+
 import React, { Component } from 'react';
 import {
   View,
   Text,
   Image,
-  TouchableHighlight,
-  StyleSheet
+  TouchableHighlight
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -27,7 +29,7 @@ export default class ChartRow extends Component {
                   {this.props.data.name}
               </Text>
               <Text style={baseStyles.rowSubtitle}>
-                12 playlists
+                {this.props.data.playlistsCount} playlists
               </Text>
             </View>
             <Icon name="angle-right" size={30} color={colors.light}

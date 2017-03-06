@@ -1,3 +1,6 @@
+// @flow
+'use strict';
+
 import { Navigation } from 'react-native-navigation';
 import ChartCatalogScreen from './screens/ChartCatalogScreen';
 import ChartDetailScreen from './screens/ChartDetailScreen';

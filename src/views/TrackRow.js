@@ -1,3 +1,6 @@
+// @flow
+'use strict';
+
 import React, { Component } from 'react';
 import {
   View,
@@ -14,10 +17,28 @@ var colors = require('../colors');
 
 export default class TrackRow extends Component {
   render() {
+    let rating;
+    if (this.props.data.rating) {
+      rating = (
+        <Text style={[styles.ratingText]}>
+          { this.props.data.rating }
+        </Text>
+      )
+    } else {
+      rating = (
+        <TouchableHighlight
+          underlayColor={colors.rowHighlighted}
+          onPress={this.props.onReviewPress}
+          style={styles.review}>
+            <Icon name="star-o" size={30} color={colors.primary}/>
+        </TouchableHighlight>
+      )
+    }
+
     return (
       <View style={baseStyles.row}>
         <Image
-          source={{uri: 'https://pbs.twimg.com/media/C1E4xfBWIAAUceW.jpg'}}
+          source={{uri: this.props.data.imageUrl}}
           style={baseStyles.rowImage}/>
         <View style={baseStyles.rowTextContainer}>
           <Text
@@ -30,20 +51,22 @@ export default class TrackRow extends Component {
             {this.props.data.artist}
           </Text>
         </View>
-        <TouchableHighlight
-          underlayColor={colors.rowHighlighted}
-          onPress={this.props.onReviewPress}
-          style={styles.reviewButton}>
-            <Icon name="star-o" size={30} color={colors.primary}/>
-        </TouchableHighlight>
+        { rating }
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  reviewButton: {
+  review: {
     alignSelf: 'center',
     marginRight: 5
+  },
+  ratingText: {
+    width: 40,
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: '500',
+    color: colors.dark
   }
 });

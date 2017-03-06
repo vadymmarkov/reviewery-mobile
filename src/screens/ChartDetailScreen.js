@@ -1,3 +1,4 @@
+// @flow
 'use strict';
 
 import React, { Component } from 'react';
@@ -5,73 +6,100 @@ import {
   StyleSheet,
   ListView,
   Text,
-  View
+  View,
+  RefreshControl
 } from 'react-native';
 
 import PlaylistRow from '../views/PlaylistRow';
-
-const FBSDK = require('react-native-fbsdk');
-const {
-  LoginManager,
-  AccessToken
-} = FBSDK;
+import Networking from '../networking/Networking';
 
 var baseStyles = require('../styles');
 var colors = require('../colors');
 
 export default class ChartDetailScreen extends Component {
 
-  // Initialize the hardcoded data
   constructor(props) {
     super(props);
-    const dataSource = new ListView.DataSource({
+    this.networking = new Networking();
+    const listDataSource = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
 
     this.state = {
-      dataSource: dataSource.cloneWithRows([
-        {name: 'January 2017'}, {name: 'February 2017'}
-      ])
+      dataSource: listDataSource.cloneWithRows([]),
+      refreshing: true
     };
   }
 
+  // Lifecycle
+
   componentWillMount() {
-    AccessToken.getCurrentAccessToken()
-    .then((data) => {
+    this.refreshData();
+  }
 
+  // Events
+
+  onPressRow(rowData) {
+    this.props.navigator.push({
+      screen: 'app.PlaylistDetailScreen',
+      title: rowData.name,
+      backButtonTitle: '',
+      passProps: {
+        chartId: this.props.chartId,
+        playlistId: rowData._id
+      }
     })
-    .catch((error) => {
+  }
 
-    });
+  // Networking
+
+  async refreshData() {
+    try {
+      this.setState({refreshing: true});
+      let data = await this.networking.get(
+        `charts/${this.props.chartId}`
+      );
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows(data.playlists),
+        refreshing: false
+      });
+    } catch(error) {
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows([]),
+        refreshing: false
+      });
+    }
+  }
+
+  // Rendering
+
+  renderRow(rowData, sectionId, rowId) {
+    return (
+      <PlaylistRow
+        data={rowData}
+        onPress={this.onPressRow.bind(this, rowData)}/>
+    );
   }
 
   render() {
     return (
       <View style={baseStyles.screenContainer}>
         <ListView
+          enableEmptySections={true}
+          refreshControl={
+            <RefreshControl
+              tintColor={colors.dark}
+              refreshing={this.state.refreshing}
+              onRefresh={this.refreshData.bind(this)}
+            />
+          }
           dataSource={this.state.dataSource}
-          renderRow={this._renderRow.bind(this)}
+          renderRow={this.renderRow.bind(this)}
           renderSeparator={ (sectionId, rowId) =>
             <View key={rowId} style={baseStyles.separator} />
           }
         />
       </View>
     );
-  }
-
-  /// Private
-
-  _renderRow(rowData, sectionId, rowId) {
-    return (
-      <PlaylistRow data={rowData} onPress={this._onPressRow.bind(this, rowData)}/>
-     );
-   }
-
-  _onPressRow(rowData) {
-    this.props.navigator.push({
-      screen: 'app.PlaylistDetailScreen',
-      title: rowData.name,
-      backButtonTitle: ''
-    })
   }
 }

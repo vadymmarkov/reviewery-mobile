@@ -1,5 +1,5 @@
 {
-  "name": "MusicAwards",
+  "name": "Reviewery",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,12 +11,12 @@
     "react-native": "0.41.2",
     "react-native-fbsdk": "^0.5.0",
     "react-native-navigation": "^2.0.0-experimental.233",
-    "react-native-star-rating": "^1.0.6",
-    "react-native-swiper": "^1.5.4"
+    "react-native-star-rating": "^1.0.6"
   },
   "devDependencies": {
     "babel-jest": "18.0.0",
     "babel-preset-react-native": "1.9.1",
+    "flow-bin": "^0.41.0",
     "jest": "18.1.0",
     "react-test-renderer": "15.4.2"
   },
