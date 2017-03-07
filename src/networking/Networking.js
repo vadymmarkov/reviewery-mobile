@@ -7,10 +7,12 @@ const {
   AccessToken
 } = FBSDK;
 
+import Config from 'react-native-config';
+
 export default class Networking {
 
   constructor() {
-    this.baseUrl = "http://localhost:3000/api/";
+    this.baseUrl = Config.API_URL;
   }
 
   // Method requests

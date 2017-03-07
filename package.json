@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "15.4.2",
     "react-native": "0.41.2",
+    "react-native-config": "^0.3.1",
     "react-native-fbsdk": "^0.5.0",
     "react-native-navigation": "^2.0.0-experimental.233",
     "react-native-star-rating": "^1.0.6"

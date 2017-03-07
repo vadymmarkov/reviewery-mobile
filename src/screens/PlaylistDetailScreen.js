@@ -56,9 +56,17 @@ export default class PlaylistDetailScreen extends Component {
       return;
     }
 
+    let uri = this.state.href;
+
     AlertIOS.alert(this.state.name, '', [
       {text: 'Cancel', style: 'cancel'},
-      {text: 'Open in Spotify', onPress: () => Linking.openURL(this.state.href)},
+      {text: 'Open in Spotify', onPress: function() {
+        Linking.canOpenURL(uri).then(supported => {
+          if (supported) {
+            return Linking.openURL(uri);
+          }
+        });
+      }},
     ]);
   }
 
