@@ -63,6 +63,36 @@
 		D5ABF3A81E6E04C3003C3993 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */; };
 		D5ABF3A91E6E04C3003C3993 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */; };
 		D5ABF3C91E6E0815003C3993 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3AF1E6E0565003C3993 /* libReactNativeNavigation.a */; };
+		D5DC9A111E6F823500BE9FEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		D5DC9A121E6F823500BE9FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		D5DC9A141E6F823500BE9FEA /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		D5DC9A151E6F823500BE9FEA /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		D5DC9A161E6F823500BE9FEA /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3AF1E6E0565003C3993 /* libReactNativeNavigation.a */; };
+		D5DC9A171E6F823500BE9FEA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */; };
+		D5DC9A181E6F823500BE9FEA /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		D5DC9A191E6F823500BE9FEA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF39E1E6E04C3003C3993 /* Bolts.framework */; };
+		D5DC9A1A1E6F823500BE9FEA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A01E6E04C3003C3993 /* FBSDKLoginKit.framework */; };
+		D5DC9A1B1E6F823500BE9FEA /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		D5DC9A1C1E6F823500BE9FEA /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		D5DC9A1D1E6F823500BE9FEA /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		D5DC9A1E1E6F823500BE9FEA /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		D5DC9A1F1E6F823500BE9FEA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF39F1E6E04C3003C3993 /* FBSDKCoreKit.framework */; };
+		D5DC9A201E6F823500BE9FEA /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		D5DC9A211E6F823500BE9FEA /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		D5DC9A221E6F823500BE9FEA /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		D5DC9A231E6F823500BE9FEA /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		D5DC9A241E6F823500BE9FEA /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB6E273E26E4C5C96DE6523 /* libRCTFBSDK.a */; };
+		D5DC9A251E6F823500BE9FEA /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E25FC3180544CFE9A1FFFD5 /* libReactNativeConfig.a */; };
+		D5DC9A271E6F823500BE9FEA /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF3711E6E0435003C3993 /* MaterialIcons.ttf */; };
+		D5DC9A281E6F823500BE9FEA /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF3721E6E0435003C3993 /* Octicons.ttf */; };
+		D5DC9A291E6F823500BE9FEA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF3731E6E0435003C3993 /* Zocial.ttf */; };
+		D5DC9A2A1E6F823500BE9FEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		D5DC9A2B1E6F823500BE9FEA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF36E1E6E0435003C3993 /* FontAwesome.ttf */; };
+		D5DC9A2C1E6F823500BE9FEA /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF36D1E6E0435003C3993 /* EvilIcons.ttf */; };
+		D5DC9A2D1E6F823500BE9FEA /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF3701E6E0435003C3993 /* Ionicons.ttf */; };
+		D5DC9A2E1E6F823500BE9FEA /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF36F1E6E0435003C3993 /* Foundation.ttf */; };
+		D5DC9A2F1E6F823500BE9FEA /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF36C1E6E0435003C3993 /* Entypo.ttf */; };
+		D5DC9A301E6F823500BE9FEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,7 +309,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
 		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
@@ -319,6 +348,8 @@
 		D5ABF3A01E6E04C3003C3993 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		D5ABF3AA1E6E0565003C3993 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
+		D5DC9A351E6F823500BE9FEA /* Reviewery Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reviewery Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DC9A371E6F82A700BE9FEA /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-Release.plist"; path = "Reviewery/Info-Release.plist"; sourceTree = "<group>"; };
 		EEBB5B52D752499BBCCBBF6F /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTFBSDK.xcodeproj; path = "../node_modules/react-native-fbsdk/ios/RCTFBSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -379,6 +410,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5DC9A131E6F823500BE9FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DC9A141E6F823500BE9FEA /* libReact.a in Frameworks */,
+				D5DC9A151E6F823500BE9FEA /* libRCTAnimation.a in Frameworks */,
+				D5DC9A161E6F823500BE9FEA /* libReactNativeNavigation.a in Frameworks */,
+				D5DC9A171E6F823500BE9FEA /* FBSDKShareKit.framework in Frameworks */,
+				D5DC9A181E6F823500BE9FEA /* libRCTActionSheet.a in Frameworks */,
+				D5DC9A191E6F823500BE9FEA /* Bolts.framework in Frameworks */,
+				D5DC9A1A1E6F823500BE9FEA /* FBSDKLoginKit.framework in Frameworks */,
+				D5DC9A1B1E6F823500BE9FEA /* libRCTGeolocation.a in Frameworks */,
+				D5DC9A1C1E6F823500BE9FEA /* libRCTImage.a in Frameworks */,
+				D5DC9A1D1E6F823500BE9FEA /* libRCTLinking.a in Frameworks */,
+				D5DC9A1E1E6F823500BE9FEA /* libRCTNetwork.a in Frameworks */,
+				D5DC9A1F1E6F823500BE9FEA /* FBSDKCoreKit.framework in Frameworks */,
+				D5DC9A201E6F823500BE9FEA /* libRCTSettings.a in Frameworks */,
+				D5DC9A211E6F823500BE9FEA /* libRCTText.a in Frameworks */,
+				D5DC9A221E6F823500BE9FEA /* libRCTVibration.a in Frameworks */,
+				D5DC9A231E6F823500BE9FEA /* libRCTWebSocket.a in Frameworks */,
+				D5DC9A241E6F823500BE9FEA /* libRCTFBSDK.a in Frameworks */,
+				D5DC9A251E6F823500BE9FEA /* libReactNativeConfig.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,14 +521,14 @@
 		13B07FAE1A68108700A75B9A /* Reviewery */ = {
 			isa = PBXGroup;
 			children = (
-				D5ABF36B1E6E0435003C3993 /* Fonts */,
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
-				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				D5DC9A371E6F82A700BE9FEA /* Info-Release.plist */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				D5ABF36B1E6E0435003C3993 /* Fonts */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 			);
 			name = Reviewery;
 			sourceTree = "<group>";
@@ -560,6 +616,7 @@
 				00E356EE1AD99517003FC87E /* RevieweryTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* Reviewery-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* Reviewery-tvOSTests.xctest */,
+				D5DC9A351E6F823500BE9FEA /* Reviewery Release.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -690,6 +747,24 @@
 			productReference = 2D02E4901E0B4A5D006451C7 /* Reviewery-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D5DC9A0F1E6F823500BE9FEA /* Reviewery Release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5DC9A321E6F823500BE9FEA /* Build configuration list for PBXNativeTarget "Reviewery Release" */;
+			buildPhases = (
+				D5DC9A101E6F823500BE9FEA /* Sources */,
+				D5DC9A131E6F823500BE9FEA /* Frameworks */,
+				D5DC9A261E6F823500BE9FEA /* Resources */,
+				D5DC9A311E6F823500BE9FEA /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reviewery Release";
+			productName = "Hello World";
+			productReference = D5DC9A351E6F823500BE9FEA /* Reviewery Release.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -701,9 +776,12 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = LG4DBY4QF9;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = LG4DBY4QF9;
 						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -714,6 +792,9 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+					D5DC9A0F1E6F823500BE9FEA = {
+						DevelopmentTeam = LG4DBY4QF9;
 					};
 				};
 			};
@@ -792,6 +873,7 @@
 				00E356ED1AD99517003FC87E /* RevieweryTests */,
 				2D02E47A1E0B4A5D006451C7 /* Reviewery-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* Reviewery-tvOSTests */,
+				D5DC9A0F1E6F823500BE9FEA /* Reviewery Release */,
 			);
 		};
 /* End PBXProject section */
@@ -1043,6 +1125,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5DC9A261E6F823500BE9FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DC9A271E6F823500BE9FEA /* MaterialIcons.ttf in Resources */,
+				D5DC9A281E6F823500BE9FEA /* Octicons.ttf in Resources */,
+				D5DC9A291E6F823500BE9FEA /* Zocial.ttf in Resources */,
+				D5DC9A2A1E6F823500BE9FEA /* Images.xcassets in Resources */,
+				D5DC9A2B1E6F823500BE9FEA /* FontAwesome.ttf in Resources */,
+				D5DC9A2C1E6F823500BE9FEA /* EvilIcons.ttf in Resources */,
+				D5DC9A2D1E6F823500BE9FEA /* Ionicons.ttf in Resources */,
+				D5DC9A2E1E6F823500BE9FEA /* Foundation.ttf in Resources */,
+				D5DC9A2F1E6F823500BE9FEA /* Entypo.ttf in Resources */,
+				D5DC9A301E6F823500BE9FEA /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1068,6 +1167,20 @@
 			inputPaths = (
 			);
 			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+		D5DC9A311E6F823500BE9FEA /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1111,6 +1224,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5DC9A101E6F823500BE9FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DC9A111E6F823500BE9FEA /* AppDelegate.m in Sources */,
+				D5DC9A121E6F823500BE9FEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1143,6 +1265,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LG4DBY4QF9;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1169,6 +1293,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = LG4DBY4QF9;
 				INFOPLIST_FILE = RevieweryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1192,7 +1317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LG4DBY4QF9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -1208,6 +1333,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Reviewery;
 				PRODUCT_NAME = Reviewery;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1217,7 +1344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LG4DBY4QF9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -1233,6 +1360,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Reviewery;
 				PRODUCT_NAME = Reviewery;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1443,6 +1572,61 @@
 			};
 			name = Release;
 		};
+		D5DC9A331E6F823500BE9FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = LG4DBY4QF9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-navigation/ios/**";
+				INFOPLIST_FILE = "Reviewery/Info-Release.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Reviewery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		D5DC9A341E6F823500BE9FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LG4DBY4QF9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-navigation/ios/**";
+				INFOPLIST_FILE = "Reviewery/Info-Release.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Reviewery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1487,6 +1671,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5DC9A321E6F823500BE9FEA /* Build configuration list for PBXNativeTarget "Reviewery Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5DC9A331E6F823500BE9FEA /* Debug */,
+				D5DC9A341E6F823500BE9FEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

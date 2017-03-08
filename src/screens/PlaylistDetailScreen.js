@@ -61,11 +61,7 @@ export default class PlaylistDetailScreen extends Component {
     AlertIOS.alert(this.state.name, '', [
       {text: 'Cancel', style: 'cancel'},
       {text: 'Open in Spotify', onPress: function() {
-        Linking.canOpenURL(uri).then(supported => {
-          if (supported) {
-            return Linking.openURL(uri);
-          }
-        });
+        Linking.openURL(uri);
       }},
     ]);
   }
