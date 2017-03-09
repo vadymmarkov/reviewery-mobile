@@ -8,6 +8,7 @@ import {
   Text,
   View,
   ActivityIndicator,
+  TouchableHighlight,
   Dimensions
 } from 'react-native';
 
@@ -20,6 +21,10 @@ var colors = require('../colors');
 var {height, width} = Dimensions.get('window');
 
 export default class TrackReviewScreen extends Component {
+
+  static navigatorStyle = {
+    statusBarTextColorSchemeSingleScreen: 'light'
+  };
 
   constructor(props) {
     super(props);
@@ -37,6 +42,13 @@ export default class TrackReviewScreen extends Component {
     this.setState({
       rating: rating
     });
+  }
+
+  onPressCancel() {
+    if (this.state.animating) {
+      return;
+    }
+    this.props.cancelTrackReview();
   }
 
   onPressSubmit() {
@@ -61,7 +73,7 @@ export default class TrackReviewScreen extends Component {
       this.setState({
         animating: false
       });
-      this.props.submitTrackReview(this.props.rowId, this.state.rating);
+      this.props.submitTrackReview();
     } catch(error) {
       this.setState({
         animating: false,
@@ -103,12 +115,20 @@ export default class TrackReviewScreen extends Component {
         <Text style={styles.error}>
           {this.state.error}
         </Text>
-        <RoundedButton
-          title="Submit"
-          highlightColor={colors.primaryHighlighted}
-          style={[baseStyles.button, styles.button]}
-          textStyle={[baseStyles.buttonText, styles.buttonText]}
-          onPress={this.onPressSubmit.bind(this)}/>
+        <View style={styles.buttonContainer}>
+          <RoundedButton
+            title="Submit"
+            highlightColor={colors.primaryHighlighted}
+            style={[styles.button, styles.submitButton]}
+            textStyle={[baseStyles.buttonText, styles.submitButtonText]}
+            onPress={this.onPressSubmit.bind(this)}/>
+          <RoundedButton
+            title="Cancel"
+            highlightColor={colors.whiteHighlighted}
+            style={[styles.button, styles.cancelButton]}
+            textStyle={[baseStyles.buttonText, styles.cancelButtonText]}
+            onPress={this.onPressCancel.bind(this)}/>
+        </View>
       </View>
     );
   }
@@ -140,11 +160,30 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#FFEFB3'
   },
+  buttonContainer: {
+    margin: 100,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   button: {
+    width: 260,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  submitButton: {
     backgroundColor: colors.primary
   },
-  buttonText: {
+  submitButtonText: {
     color: colors.white
+  },
+  cancelButton: {
+    backgroundColor: colors.white,
+    margin: 15
+  },
+  cancelButtonText: {
+    color: colors.primary
   },
   activityIndicator: {
     alignItems: 'center',

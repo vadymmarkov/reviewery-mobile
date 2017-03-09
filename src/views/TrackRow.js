@@ -27,7 +27,7 @@ export default class TrackRow extends Component {
     } else {
       rating = (
         <TouchableHighlight
-          underlayColor={colors.rowHighlighted}
+          underlayColor={colors.white}
           onPress={this.props.onReviewPress}
           style={styles.review}>
             <Icon name="star-o" size={30} color={colors.primary}/>

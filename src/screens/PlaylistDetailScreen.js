@@ -20,6 +20,10 @@ var colors = require('../colors');
 
 export default class PlaylistDetailScreen extends Component {
 
+  static navigatorStyle = {
+    statusBarTextColorSchemeSingleScreen: 'dark'
+  };
+
   static navigatorButtons = {
     rightButtons: [{
       icon: require('../../img/navBarMore.png'),
@@ -31,6 +35,7 @@ export default class PlaylistDetailScreen extends Component {
     super(props);
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     this.onSubmitTrackReview = this.closeTrackReview.bind(this);
+    this.onCancelTrackReview = this.cancelTrackReview.bind(this);
     this.networking = new Networking();
 
     const listDataSource = new ListView.DataSource({
@@ -73,7 +78,8 @@ export default class PlaylistDetailScreen extends Component {
         chartId: this.props.chartId,
         playlistId: this.props.playlistId,
         track: rowData,
-        submitTrackReview: this.onSubmitTrackReview
+        submitTrackReview: this.onSubmitTrackReview,
+        cancelTrackReview: this.onCancelTrackReview
       },
       style: {
         backgroundBlur: "dark",
@@ -82,8 +88,12 @@ export default class PlaylistDetailScreen extends Component {
     });
   }
 
-  closeTrackReview(rowId, rating) {
+  closeTrackReview() {
     this.refreshData();
+    this.props.navigator.dismissLightBox();
+  }
+
+  cancelTrackReview() {
     this.props.navigator.dismissLightBox();
   }
 

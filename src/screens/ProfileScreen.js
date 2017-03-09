@@ -24,6 +24,10 @@ var colors = require('../colors');
 
 export default class ProfileScreen extends Component {
 
+  static navigatorStyle = {
+    statusBarTextColorSchemeSingleScreen: 'dark'
+  };
+
   constructor(props) {
     super(props);
 
@@ -108,6 +112,7 @@ const styles = StyleSheet.create({
     width: 180,
     height: 180,
     borderRadius: 90,
+    marginTop: 60,
     backgroundColor: colors.light
   },
   title: {

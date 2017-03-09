@@ -23,6 +23,10 @@ var colors = require('../colors');
 
 export default class LoginScreen extends Component {
 
+  static navigatorStyle = {
+    statusBarTextColorSchemeSingleScreen: 'light'
+  };
+
   // Events
 
   onPressLogin() {
@@ -54,6 +58,7 @@ export default class LoginScreen extends Component {
     return (
       <View style={[baseStyles.container, styles.container]}>
         <Image
+          style={styles.logo}
           source={require('../../img/logo.png')}
         />
         <Text style={[baseStyles.heading, styles.title]}>
@@ -76,6 +81,9 @@ export default class LoginScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.primary
+  },
+  logo: {
+    marginTop: 60
   },
   title: {
     marginTop: 20,

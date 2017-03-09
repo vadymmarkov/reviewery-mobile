@@ -18,6 +18,10 @@ var colors = require('../colors');
 
 export default class ChartDetailScreen extends Component {
 
+  static navigatorStyle = {
+    statusBarTextColorSchemeSingleScreen: 'dark'
+  };
+
   constructor(props) {
     super(props);
     this.networking = new Networking();

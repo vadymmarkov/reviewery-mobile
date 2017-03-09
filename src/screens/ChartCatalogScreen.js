@@ -19,6 +19,7 @@ var colors = require('../colors');
 export default class ChartCatalogScreen extends Component {
 
   static navigatorStyle = {
+    statusBarTextColorSchemeSingleScreen: 'dark',
     navBarButtonColor: colors.primary,
     navBarTextColor: colors.title
   };
