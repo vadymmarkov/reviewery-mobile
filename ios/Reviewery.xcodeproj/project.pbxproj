@@ -38,6 +38,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		C4004021EA644E218F201489 /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB6E273E26E4C5C96DE6523 /* libRCTFBSDK.a */; };
+		D00DE89D1188DCE14E872E3E /* libPods-Reviewery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F25D269D186CCCDC7CEF670F /* libPods-Reviewery.a */; };
 		D5ABF3741E6E0435003C3993 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF36C1E6E0435003C3993 /* Entypo.ttf */; };
 		D5ABF3751E6E0435003C3993 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF36C1E6E0435003C3993 /* Entypo.ttf */; };
 		D5ABF3761E6E0436003C3993 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF36D1E6E0435003C3993 /* EvilIcons.ttf */; };
@@ -54,14 +55,6 @@
 		D5ABF3811E6E0436003C3993 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF3721E6E0435003C3993 /* Octicons.ttf */; };
 		D5ABF3821E6E0436003C3993 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF3731E6E0435003C3993 /* Zocial.ttf */; };
 		D5ABF3831E6E0436003C3993 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5ABF3731E6E0435003C3993 /* Zocial.ttf */; };
-		D5ABF3A21E6E04C3003C3993 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF39E1E6E04C3003C3993 /* Bolts.framework */; };
-		D5ABF3A31E6E04C3003C3993 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF39E1E6E04C3003C3993 /* Bolts.framework */; };
-		D5ABF3A41E6E04C3003C3993 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF39F1E6E04C3003C3993 /* FBSDKCoreKit.framework */; };
-		D5ABF3A51E6E04C3003C3993 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF39F1E6E04C3003C3993 /* FBSDKCoreKit.framework */; };
-		D5ABF3A61E6E04C3003C3993 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A01E6E04C3003C3993 /* FBSDKLoginKit.framework */; };
-		D5ABF3A71E6E04C3003C3993 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A01E6E04C3003C3993 /* FBSDKLoginKit.framework */; };
-		D5ABF3A81E6E04C3003C3993 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */; };
-		D5ABF3A91E6E04C3003C3993 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */; };
 		D5ABF3C91E6E0815003C3993 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ABF3AF1E6E0565003C3993 /* libReactNativeNavigation.a */; };
 /* End PBXBuildFile section */
 
@@ -300,6 +293,7 @@
 		2D02E47B1E0B4A5D006451C7 /* Reviewery-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reviewery-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Reviewery-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reviewery-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E25FC3180544CFE9A1FFFD5 /* libReactNativeConfig.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeConfig.a; sourceTree = "<group>"; };
+		346A8203F679EE995AF14099 /* Pods-Reviewery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reviewery.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reviewery/Pods-Reviewery.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -313,13 +307,11 @@
 		D5ABF3711E6E0435003C3993 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		D5ABF3721E6E0435003C3993 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		D5ABF3731E6E0435003C3993 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
-		D5ABF39E1E6E04C3003C3993 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		D5ABF39F1E6E04C3003C3993 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		D5ABF3A01E6E04C3003C3993 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		D5ABF3AA1E6E0565003C3993 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		D5DC9A371E6F82A700BE9FEA /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-Release.plist"; path = "Reviewery/Info-Release.plist"; sourceTree = "<group>"; };
 		EEBB5B52D752499BBCCBBF6F /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTFBSDK.xcodeproj; path = "../node_modules/react-native-fbsdk/ios/RCTFBSDK.xcodeproj"; sourceTree = "<group>"; };
+		EEC88BB2604DC2B0CDEAAB08 /* Pods-Reviewery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reviewery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reviewery/Pods-Reviewery.debug.xcconfig"; sourceTree = "<group>"; };
+		F25D269D186CCCDC7CEF670F /* libPods-Reviewery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reviewery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,21 +330,18 @@
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				D5ABF3C91E6E0815003C3993 /* libReactNativeNavigation.a in Frameworks */,
-				D5ABF3A81E6E04C3003C3993 /* FBSDKShareKit.framework in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
-				D5ABF3A21E6E04C3003C3993 /* Bolts.framework in Frameworks */,
-				D5ABF3A61E6E04C3003C3993 /* FBSDKLoginKit.framework in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
-				D5ABF3A41E6E04C3003C3993 /* FBSDKCoreKit.framework in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				C4004021EA644E218F201489 /* libRCTFBSDK.a in Frameworks */,
 				46B7A886B4F44499A5E0F410 /* libReactNativeConfig.a in Frameworks */,
+				D00DE89D1188DCE14E872E3E /* libPods-Reviewery.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,11 +354,7 @@
 				2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */,
 				2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */,
 				2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */,
-				D5ABF3A51E6E04C3003C3993 /* FBSDKCoreKit.framework in Frameworks */,
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
-				D5ABF3A31E6E04C3003C3993 /* Bolts.framework in Frameworks */,
-				D5ABF3A91E6E04C3003C3993 /* FBSDKShareKit.framework in Frameworks */,
-				D5ABF3A71E6E04C3003C3993 /* FBSDKLoginKit.framework in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
 			);
@@ -492,6 +477,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1E782F55264EE2F01A6C768C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEC88BB2604DC2B0CDEAAB08 /* Pods-Reviewery.debug.xcconfig */,
+				346A8203F679EE995AF14099 /* Pods-Reviewery.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +493,14 @@
 				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		77BA51282C8CE7E0642E56E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F25D269D186CCCDC7CEF670F /* libPods-Reviewery.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
@@ -543,11 +545,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				D5ABF39D1E6E04C3003C3993 /* Frameworks */,
 				13B07FAE1A68108700A75B9A /* Reviewery */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RevieweryTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				1E782F55264EE2F01A6C768C /* Pods */,
+				77BA51282C8CE7E0642E56E1 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -586,17 +589,6 @@
 			);
 			name = Fonts;
 			path = "../node_modules/react-native-vector-icons/Fonts";
-			sourceTree = "<group>";
-		};
-		D5ABF39D1E6E04C3003C3993 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D5ABF39E1E6E04C3003C3993 /* Bolts.framework */,
-				D5ABF39F1E6E04C3003C3993 /* FBSDKCoreKit.framework */,
-				D5ABF3A01E6E04C3003C3993 /* FBSDKLoginKit.framework */,
-				D5ABF3A11E6E04C3003C3993 /* FBSDKShareKit.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		D5ABF3AB1E6E0565003C3993 /* Products */ = {
@@ -640,10 +632,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Reviewery" */;
 			buildPhases = (
+				68BCB602B0349FA1ED3463A9 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				F61CF2C7AA391E6ADF22EFBF /* [CP] Embed Pods Frameworks */,
+				B8EBDBA2DA508FD6BC71B28B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1077,6 +1072,51 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		68BCB602B0349FA1ED3463A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B8EBDBA2DA508FD6BC71B28B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reviewery/Pods-Reviewery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F61CF2C7AA391E6ADF22EFBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reviewery/Pods-Reviewery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1194,6 +1234,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEC88BB2604DC2B0CDEAAB08 /* Pods-Reviewery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1203,7 +1244,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-navigation/ios/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Reviewery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1222,6 +1266,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346A8203F679EE995AF14099 /* Pods-Reviewery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1230,7 +1275,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-navigation/ios/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Reviewery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
