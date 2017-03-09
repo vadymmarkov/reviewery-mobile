@@ -54,3 +54,12 @@ fastlane/Preview.html
 fastlane/screenshots
 
 .env
+
+# CocoaPods
+Pods
+
+# Carthage
+Carthage
+
+# SPM
+.build/
