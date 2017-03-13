@@ -8,6 +8,7 @@ import LoginScreen from './screens/LoginScreen';
 import PlaylistDetailScreen from './screens/PlaylistDetailScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import TrackReviewScreen from './screens/TrackReviewScreen';
+import TrackCatalogScreen from './screens/TrackCatalogScreen';
 
 var colors = require('./colors');
 
@@ -32,6 +33,9 @@ export default class NavigationService {
     );
     Navigation.registerComponent(
       'app.TrackReviewScreen', () => TrackReviewScreen
+    );
+    Navigation.registerComponent(
+      'app.TrackCatalogScreen', () => TrackCatalogScreen
     );
   }
 

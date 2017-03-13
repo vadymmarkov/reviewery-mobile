@@ -24,6 +24,7 @@ export default class ChartDetailScreen extends Component {
 
   constructor(props) {
     super(props);
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     this.networking = new Networking();
     const listDataSource = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
@@ -43,6 +44,21 @@ export default class ChartDetailScreen extends Component {
 
   // Events
 
+  onNavigatorEvent(event) {
+    if (event.type != 'NavBarButtonPress' || event.id != 'top') {
+      return;
+    }
+
+    this.props.navigator.push({
+      screen: 'app.TrackCatalogScreen',
+      title: this.state.name,
+      backButtonTitle: '',
+      passProps: {
+        chartId: this.props.chartId
+      }
+    });
+  }
+
   onPressRow(rowData) {
     this.props.navigator.push({
       screen: 'app.PlaylistDetailScreen',
@@ -52,7 +68,7 @@ export default class ChartDetailScreen extends Component {
         chartId: this.props.chartId,
         playlistId: rowData._id
       }
-    })
+    });
   }
 
   // Networking
@@ -64,9 +80,18 @@ export default class ChartDetailScreen extends Component {
         `charts/${this.props.chartId}`
       );
       this.setState({
+        name: data.name,
         dataSource: this.state.dataSource.cloneWithRows(data.playlists),
         refreshing: false
       });
+
+      if (data.isReviewed) {
+        let rightButton = {
+          icon: require('../../img/navBarTop.png'),
+          id: 'top'
+        };
+        this.props.navigator.setButtons({rightButtons: [rightButton]});
+      }
     } catch(error) {
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows([]),
