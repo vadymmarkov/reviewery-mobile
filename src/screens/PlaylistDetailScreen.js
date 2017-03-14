@@ -24,13 +24,6 @@ export default class PlaylistDetailScreen extends Component {
     statusBarTextColorSchemeSingleScreen: 'dark'
   };
 
-  static navigatorButtons = {
-    rightButtons: [{
-      icon: require('../../img/navBarMore.png'),
-      id: 'more'
-    }]
-  };
-
   constructor(props) {
     super(props);
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
@@ -57,7 +50,20 @@ export default class PlaylistDetailScreen extends Component {
   // Events
 
   onNavigatorEvent(event) {
-    if (event.type != 'NavBarButtonPress' || event.id != 'more') {
+    if (event.type != 'NavBarButtonPress') {
+      return;
+    }
+
+    if (event.id == 'top') {
+      this.props.navigator.push({
+        screen: 'app.TrackCatalogScreen',
+        title: this.state.name,
+        backButtonTitle: '',
+        passProps: {
+          chartId: this.props.chartId,
+          playlistId: this.props.playlistId
+        }
+      });
       return;
     }
 
@@ -111,6 +117,22 @@ export default class PlaylistDetailScreen extends Component {
         dataSource: this.state.dataSource.cloneWithRows(data.tracks),
         refreshing: false
       });
+
+      let rightButton;
+
+      if (data.isReviewed) {
+        rightButton = {
+          icon: require('../../img/navBarTop.png'),
+          id: 'top'
+        };
+      } else {
+        rightButton = {
+          icon: require('../../img/navBarMore.png'),
+          id: 'more'
+        };
+      }
+
+      this.props.navigator.setButtons({rightButtons: [rightButton]});
     } catch(error) {
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows([]),

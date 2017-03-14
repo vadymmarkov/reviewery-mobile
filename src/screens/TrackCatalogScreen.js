@@ -7,16 +7,18 @@ import {
   ListView,
   Text,
   View,
-  RefreshControl
+  RefreshControl,
+  AlertIOS,
+  Linking
 } from 'react-native';
 
-import PlaylistRow from '../views/PlaylistRow';
+import TrackRow from '../views/TrackRow';
 import Networking from '../networking/Networking';
 
 var baseStyles = require('../styles');
 var colors = require('../colors');
 
-export default class ChartDetailScreen extends Component {
+export default class TrackCatalogScreen extends Component {
 
   static navigatorStyle = {
     statusBarTextColorSchemeSingleScreen: 'dark'
@@ -24,8 +26,8 @@ export default class ChartDetailScreen extends Component {
 
   constructor(props) {
     super(props);
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     this.networking = new Networking();
+
     const listDataSource = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
@@ -42,56 +44,33 @@ export default class ChartDetailScreen extends Component {
     this.refreshData();
   }
 
-  // Events
-
-  onNavigatorEvent(event) {
-    if (event.type != 'NavBarButtonPress' || event.id != 'top') {
-      return;
-    }
-
-    this.props.navigator.push({
-      screen: 'app.TrackCatalogScreen',
-      title: this.state.name,
-      backButtonTitle: '',
-      passProps: {
-        chartId: this.props.chartId
-      }
-    });
-  }
-
-  onPressRow(rowData) {
-    this.props.navigator.push({
-      screen: 'app.PlaylistDetailScreen',
-      title: rowData.name,
-      backButtonTitle: '',
-      passProps: {
-        chartId: this.props.chartId,
-        playlistId: rowData._id
-      }
-    });
-  }
-
   // Networking
 
   async refreshData() {
     try {
       this.setState({refreshing: true});
-      let data = await this.networking.get(
-        `charts/${this.props.chartId}`
-      );
+      var url = `charts/${this.props.chartId}`;
+      var end = 100;
+
+      if (this.props.playlistId) {
+        url += `/playlists/${this.props.playlistId}`;
+        end = 10;
+      }
+
+      url += '/top';
+      let data = await this.networking.get(url);
+      let tracks;
+
+      if (data.length > end) {
+        tracks = data.slice(0, end);
+      } else {
+        tracks = data;
+      }
+
       this.setState({
-        name: data.name,
-        dataSource: this.state.dataSource.cloneWithRows(data.playlists),
+        dataSource: this.state.dataSource.cloneWithRows(tracks),
         refreshing: false
       });
-
-      if (data.isReviewed) {
-        let rightButton = {
-          icon: require('../../img/navBarTop.png'),
-          id: 'top'
-        };
-        this.props.navigator.setButtons({rightButtons: [rightButton]});
-      }
     } catch(error) {
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows([]),
@@ -104,9 +83,7 @@ export default class ChartDetailScreen extends Component {
 
   renderRow(rowData, sectionId, rowId) {
     return (
-      <PlaylistRow
-        data={rowData}
-        onPress={this.onPressRow.bind(this, rowData)}/>
+      <TrackRow data={rowData}/>
     );
   }
 
