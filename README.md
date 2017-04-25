@@ -1,7 +1,29 @@
-# Reviewery iOS application
+# Description
 
-An iOS app that shows a list of selected Spotify playlists, and as a user you can rate songs from 0 to 10. Playlists are grouped by charts, so for example “Top 2017” chart consists of songs from “January 2017”, “February 2017” playlists and so on. Then it’s easy to sort
-songs by rating and create your own “hit parade” of the year.
+**Reviewery** is an iOS application to rate songs in
+[Spotify](https://www.spotify.com) playlists. It's a hobby project built in
+React Native. Read more in my [Medium article].
+
+<div align="center">
+<img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/cover/1.png" width="270" height="480" />
+<img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/cover/2.png" width="270" height="480" />
+<img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/cover/3.png" width="270" height="480" />
+</div><br/>
+
+# Installation
+
+Assuming you’ve already installed [Node.js](https://nodejs.org),
+[CocoaPods](https://cocoapods.org) and [React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html#the-react-native-cli)
+```sh
+git clone https://github.com/vadymmarkov/reviewery-mobile.git
+cd reviewery-mobile/ios
+pod install
+cd ..
+npm install
+react-native run-ios
+```
+
+Read more about React Native setup in official [getting started guide](https://facebook.github.io/react-native/docs/getting-started.html).
 
 # Functionality
 
@@ -11,4 +33,17 @@ songs by rating and create your own “hit parade” of the year.
 - Chart detail screen with a list of attached playlists
 - Playlist detail screen with a list of songs
 - Review popup to rate songs
-- Result screen with a list of songs sorted by rating. It should be accessible only when the chart is marked as completed.
+- Result screen with a list of songs sorted by rating. It should be
+accessible only when the chart is marked as completed.
+
+## Author
+
+Vadym Markov, markov.vadym@gmail.com
+
+## Contributing
+
+Check the [CONTRIBUTING](https://github.com/vadymmarkov/reviewery-mobile/blob/master/CONTRIBUTING.md) file for more info.
+
+## License
+
+**Reviewery** is available under the MIT license. See the [LICENSE](https://github.com/vadymmarkov/reviewery-mobile/blob/master/LICENSE.md) file for more info.
