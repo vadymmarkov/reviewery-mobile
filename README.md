@@ -8,6 +8,17 @@ React Native. Read more in my [Medium article].
 <img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/reviewery.gif" alt="Reviewery" width="369" height="665" />
 </div>
 
+# Functionality
+
+- Facebook login
+- Profile screen with the possibility to logout
+- A list of charts
+- Chart detail screen with a list of attached playlists
+- Playlist detail screen with a list of songs
+- Review popup to rate songs
+- Result screen with a list of songs sorted by rating. It should be
+accessible only when the chart is marked as completed.
+
 # Installation
 
 Assuming you’ve already installed [Node.js](https://nodejs.org),
@@ -22,17 +33,6 @@ react-native run-ios
 ```
 
 Read more about React Native setup in official [getting started guide](https://facebook.github.io/react-native/docs/getting-started.html).
-
-# Functionality
-
-- Facebook login
-- Profile screen with the possibility to logout
-- A list of charts
-- Chart detail screen with a list of attached playlists
-- Playlist detail screen with a list of songs
-- Review popup to rate songs
-- Result screen with a list of songs sorted by rating. It should be
-accessible only when the chart is marked as completed.
 
 ## Author
 
