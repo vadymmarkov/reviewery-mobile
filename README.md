@@ -4,6 +4,8 @@
 [Spotify](https://www.spotify.com) playlists. It's a hobby project built in
 React Native. Read more in my [Medium article].
 
+Server side code in located [here](https://github.com/vadymmarkov/reviewery-server).
+
 <div align="center">
 <img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/reviewery.gif" alt="Reviewery" width="369" height="665" />
 </div>
