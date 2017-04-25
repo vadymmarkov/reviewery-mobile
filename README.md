@@ -5,10 +5,8 @@
 React Native. Read more in my [Medium article].
 
 <div align="center">
-<img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/cover/1.png" width="270" height="480" />
-<img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/cover/2.png" width="270" height="480" />
-<img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/cover/3.png" width="270" height="480" />
-</div><br/>
+<img src="https://github.com/vadymmarkov/reviewery-mobile/blob/master/reviewery.gif" alt="Reviewery" width="369" height="665" />
+</div>
 
 # Installation
 
