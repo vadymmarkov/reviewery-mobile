@@ -63,7 +63,12 @@ export default class NavigationService {
           screen: 'app.ChartCatalogScreen',
           icon: require('../img/tabBarCharts.png'),
           selectedIcon: require('../img/tabBarCharts.png'),
-          title: 'Charts'
+          title: 'Charts',
+          navigatorStyle: {
+            navBarTranslucent: true,
+            drawUnderTabBar: true,
+            statusBarTextColorScheme: 'dark'
+          }
         },
         {
           label: 'Profile',
@@ -85,7 +90,7 @@ export default class NavigationService {
       animationType: animated ? 'slide-down': 'none',
       tabs: createTabs(),
       tabsStyle: {
-        tabBarBackgroundColor: colors.white,
+        tabBarTranslucent: true,
         tabBarButtonColor: colors.light,
         tabBarSelectedButtonColor: colors.primary,
       }

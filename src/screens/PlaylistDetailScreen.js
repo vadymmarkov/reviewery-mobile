@@ -21,6 +21,8 @@ var colors = require('../colors');
 export default class PlaylistDetailScreen extends Component {
 
   static navigatorStyle = {
+    navBarTranslucent: true,
+    drawUnderTabBar: true,
     statusBarTextColorSchemeSingleScreen: 'dark'
   };
 
@@ -88,8 +90,8 @@ export default class PlaylistDetailScreen extends Component {
         cancelTrackReview: this.onCancelTrackReview
       },
       style: {
-        backgroundBlur: "dark",
-        backgroundColor: "#00000099"
+        backgroundBlur: "light",
+        backgroundColor: "#00000049",
       }
     });
   }

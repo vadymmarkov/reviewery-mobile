@@ -21,6 +21,8 @@ var colors = require('../colors');
 export default class TrackCatalogScreen extends Component {
 
   static navigatorStyle = {
+    navBarTranslucent: true,
+    drawUnderTabBar: true,
     statusBarTextColorSchemeSingleScreen: 'dark'
   };
 
