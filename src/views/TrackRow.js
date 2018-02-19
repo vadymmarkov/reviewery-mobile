@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     width: 40,
     textAlign: 'center',
     fontSize: 20,
-    fontWeight: '500',
+    fontWeight: '600',
     color: colors.dark
   }
 });
