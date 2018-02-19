@@ -80,7 +80,7 @@ export default class LoginScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.primary
+    backgroundColor: colors.dark
   },
   logo: {
     marginTop: 60
@@ -99,6 +99,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white
   },
   buttonText: {
-    color: colors.primary
+    color: colors.title
   }
 });

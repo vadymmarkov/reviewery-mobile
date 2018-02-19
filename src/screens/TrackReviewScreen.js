@@ -23,7 +23,7 @@ var {height, width} = Dimensions.get('window');
 export default class TrackReviewScreen extends Component {
 
   static navigatorStyle = {
-    statusBarTextColorSchemeSingleScreen: 'light'
+    statusBarTextColorSchemeSingleScreen: 'dark'
   };
 
   constructor(props) {
@@ -105,7 +105,7 @@ export default class TrackReviewScreen extends Component {
           maxStars={12}
           starSize={(width - 20) / 12}
           rating={this.state.rating}
-          starColor={'#FFEFB3'}
+          starColor={colors.primary}
           emptyStarColor={colors.white}
           selectedStar={(rating) => this.onPressRating(rating)}
         />
@@ -144,21 +144,21 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 24,
-    color: colors.white,
+    color: colors.title,
     textAlign: 'center',
     width: 300,
     margin: 10
   },
   artist: {
     fontSize: 20,
-    color: colors.subtitle,
+    color: colors.white,
     textAlign: 'center',
     marginBottom: 30,
   },
   rating: {
     marginTop: 10,
     fontSize: 20,
-    color: '#FFEFB3'
+    color: colors.primary
   },
   buttonContainer: {
     margin: 100,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   button: {
-    width: 260,
+    width: 280,
     height: 60,
     borderRadius: 30,
     justifyContent: 'center',
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     margin: 15
   },
   cancelButtonText: {
-    color: colors.primary
+    color: colors.title
   },
   activityIndicator: {
     alignItems: 'center',

@@ -19,6 +19,8 @@ var colors = require('../colors');
 export default class ChartDetailScreen extends Component {
 
   static navigatorStyle = {
+    navBarTranslucent: true,
+    drawUnderTabBar: true,
     statusBarTextColorSchemeSingleScreen: 'dark'
   };
 

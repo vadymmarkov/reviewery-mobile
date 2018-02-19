@@ -3,11 +3,12 @@
 
 module.exports = {
   white: '#fff',
+  black: '#000',
   whiteHighlighted: 'rgba(255, 255, 255, 0.8)',
-  primary: '#A63671',
-  primaryHighlighted: 'rgba(166, 54, 113, 0.8)',
+  primary: '#E92E39',
+  primaryHighlighted: 'rgba(233, 46, 57, 0.8)',
   rowHighlighted: '#eee',
-  background: '#eee',
+  background: '#fff',
   title: '#333',
   subtitle: '#919191',
   light: '#999',
