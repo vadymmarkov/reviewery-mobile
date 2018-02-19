@@ -102,15 +102,15 @@ export default class TrackReviewScreen extends Component {
         </Text>
         <StarRating
           disabled={false}
-          maxStars={10}
-          starSize={(width - 20) / 10}
+          maxStars={12}
+          starSize={(width - 20) / 12}
           rating={this.state.rating}
           starColor={'#FFEFB3'}
           emptyStarColor={colors.white}
           selectedStar={(rating) => this.onPressRating(rating)}
         />
         <Text style={styles.rating}>
-          {`${this.state.rating} of 10 stars`}
+          {`${this.state.rating} of 12 stars`}
         </Text>
         <Text style={styles.error}>
           {this.state.error}
