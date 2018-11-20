@@ -9,10 +9,10 @@
 
 #import "AppDelegate.h"
 
-#import "RCCManager.h"
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "RCCManager.h"
 
 @implementation AppDelegate
 
@@ -27,6 +27,7 @@
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
+
   [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation];
 
   return YES;
